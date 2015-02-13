@@ -20,7 +20,7 @@ import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
 
-import com.jmpergar.awesomwtextview.AwesomeTextView;
+import com.jmpergar.awesometextview.AwesomeTextView;
 
 public class HashtagsSpanRenderer implements AwesomeTextView.ViewSpanRenderer {
 

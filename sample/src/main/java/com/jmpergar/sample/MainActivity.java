@@ -19,7 +19,7 @@ package com.jmpergar.sample;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 
-import com.jmpergar.awesomwtextview.AwesomeTextView;
+import com.jmpergar.awesometextview.AwesomeTextView;
 
 public class MainActivity extends ActionBarActivity {
     private static final String hashtagPattern = "(#[\\p{L}0-9-_]+)";

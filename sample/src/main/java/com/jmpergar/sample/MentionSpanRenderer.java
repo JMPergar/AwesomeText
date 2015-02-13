@@ -21,7 +21,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.jmpergar.awesomwtextview.AwesomeTextView;
+import com.jmpergar.awesometextview.AwesomeTextView;
 
 public class MentionSpanRenderer implements AwesomeTextView.ViewSpanRenderer, AwesomeTextView.ViewSpanClickListener {
 

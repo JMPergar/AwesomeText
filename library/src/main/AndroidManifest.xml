@@ -1,6 +1,6 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jmpergar.awesomwtextview">
+    package="com.jmpergar.awesometextview">
 
     <uses-sdk android:minSdkVersion="8" />
 

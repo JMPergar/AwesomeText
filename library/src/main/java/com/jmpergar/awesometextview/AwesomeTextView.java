@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.jmpergar.awesomwtextview;
+package com.jmpergar.awesometextview;
 
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
