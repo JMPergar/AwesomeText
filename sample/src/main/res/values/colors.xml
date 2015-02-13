@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="mention_color">#21a5b8</color>
+    <color name="hashtag_color">#e45555</color>
+
+</resources>

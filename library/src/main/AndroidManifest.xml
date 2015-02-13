@@ -1,6 +1,6 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.redbooth.awesomwtextview">
+    package="com.jmpergar.awesomwtextview">
 
     <uses-sdk android:minSdkVersion="8" />
 
