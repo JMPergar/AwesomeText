@@ -1,2 +1,2 @@
-# AwesomeTextView
-An extension of TextView that facilitates works with Spans.
+# AwesomeText
+A tool that facilitates works with Spans on TextViews or any extension of thems (EditTexts, Buttons..)

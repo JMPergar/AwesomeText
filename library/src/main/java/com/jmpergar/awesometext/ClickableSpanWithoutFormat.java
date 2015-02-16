@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.jmpergar.awesometextview;
+package com.jmpergar.awesometext;
 
 import android.text.TextPaint;
 import android.text.style.ClickableSpan;

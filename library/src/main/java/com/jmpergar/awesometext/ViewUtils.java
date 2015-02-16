@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.jmpergar.awesometextview;
+package com.jmpergar.awesometext;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;

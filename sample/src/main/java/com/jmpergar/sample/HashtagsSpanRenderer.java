@@ -20,9 +20,9 @@ import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
 
-import com.jmpergar.awesometextview.AwesomeTextView;
+import com.jmpergar.awesometext.AwesomeTextHandler;
 
-public class HashtagsSpanRenderer implements AwesomeTextView.ViewSpanRenderer {
+public class HashtagsSpanRenderer implements AwesomeTextHandler.ViewSpanRenderer {
 
     private final static int textSizeInDips = 18;
     private final static int backgroundResource = R.drawable.common_hashtags_background;

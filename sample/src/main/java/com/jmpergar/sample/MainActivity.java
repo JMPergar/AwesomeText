@@ -18,8 +18,10 @@ package com.jmpergar.sample;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.TextView;
 
-import com.jmpergar.awesometextview.AwesomeTextView;
+import com.jmpergar.awesometext.AwesomeTextHandler;
 
 public class MainActivity extends ActionBarActivity {
     private static final String hashtagPattern = "(#[\\p{L}0-9-_]+)";
@@ -29,9 +31,20 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        AwesomeTextView awesomeTextView = (AwesomeTextView) findViewById(R.id.textview);
-        awesomeTextView.addViewSpanRenderer(hashtagPattern, new HashtagsSpanRenderer());
-        awesomeTextView.addViewSpanRenderer(mentionPattern, new MentionSpanRenderer());
-        awesomeTextView.applyRenderers();
+
+        TextView textView = (TextView) findViewById(R.id.textview);
+        EditText editText = (EditText) findViewById(R.id.editText);
+
+        AwesomeTextHandler awesomeTextViewHandler = new AwesomeTextHandler();
+        awesomeTextViewHandler
+                .addViewSpanRenderer(hashtagPattern, new HashtagsSpanRenderer())
+                .addViewSpanRenderer(mentionPattern, new MentionSpanRenderer())
+                .setView(textView);
+
+        AwesomeTextHandler awesomeEditTextHandler = new AwesomeTextHandler();
+        awesomeEditTextHandler
+                .addViewSpanRenderer(hashtagPattern, new HashtagsSpanRenderer())
+                .addViewSpanRenderer(mentionPattern, new MentionSpanRenderer())
+                .setView(editText);
     }
 }

@@ -21,9 +21,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.jmpergar.awesometextview.AwesomeTextView;
+import com.jmpergar.awesometext.AwesomeTextHandler;
 
-public class MentionSpanRenderer implements AwesomeTextView.ViewSpanRenderer, AwesomeTextView.ViewSpanClickListener {
+public class MentionSpanRenderer implements AwesomeTextHandler.ViewSpanRenderer, AwesomeTextHandler.ViewSpanClickListener {
 
     private final static int textSizeInDips = 18;
     private final static int backgroundResource = R.drawable.common_mentions_background;
