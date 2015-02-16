@@ -23,7 +23,7 @@ Download via Maven:
 Or Gradle:
 
 ```groovy
-    compile(group: 'com.jmpergar', name: 'AwesomeText', version: '1.0.0', ext: 'aar')
+    compile 'com.jmpergar:AwesomeText:1.0.0'
 ```
 
 Usage
