@@ -9,21 +9,16 @@ Screenshots
 Download
 --------
 
-Download via Maven:
-
-```xml
-    <dependency>
-        <groupId>com.jmpergar</groupId>
-        <artifactId>AwesomeText</artifactId>
-        <version>1.0.0</version>
-        <type>aar</type>
-    </dependency>
-```
-
-Or Gradle:
+Download via Gradle:
 
 ```groovy
-    compile 'com.jmpergar:AwesomeText:1.0.0'
+    repositories {
+        maven { url "http://dl.bintray.com/jmpergar/maven" }
+    }
+    
+    dependencies {
+        compile 'com.jmpergar:AwesomeText:1.0.0'
+    }
 ```
 
 Usage
