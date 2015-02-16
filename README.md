@@ -1,5 +1,5 @@
 # AwesomeText
-Working with Spans is ugly and difficult to manage, it's like working with a goblin of Moria. Don't understand the Spans? With AwesomeText you will only have to work with the classic Adapater Pattern. All the ease and potential of a pattern you already know how to use.
+Working with Spans is ugly and difficult to manage, it's like working with a goblin of Moria. Don't understand the Spans? With AwesomeText you will only have to work with the classic Adapter Pattern. All the ease and potential of a pattern you already know how to use.
 
 Screenshots
 -----------
