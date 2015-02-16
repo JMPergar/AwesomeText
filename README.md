@@ -1,7 +1,4 @@
 # AwesomeText
-A tool that facilitates working with Spans on TextViews or any extension of them (EditTexts, Buttons...).
-
-
 Working with Spans is ugly and difficult to manage, it's like working with a goblin of Moria. Don't understand the Spans? With AwesomeText you will only have to work with the classic Adapater Pattern. All the ease and potential of a pattern you already know how to use.
 
 Screenshots
