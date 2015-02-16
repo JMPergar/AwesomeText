@@ -17,10 +17,6 @@ On the same way that you working with ListAdapter, you must implement an interfa
 ```java
     public class HashtagsSpanRenderer implements AwesomeTextHandler.ViewSpanRenderer {
 
-        private final static int textSizeInDips = 18;
-        private final static int backgroundResource = R.drawable.common_hashtags_background;
-        private final static int textColorResource = android.R.color.white;
-
         @Override
         public View getView(String text, Context context) {
             LayoutInflater inflater = LayoutInflater.from(context);
@@ -35,10 +31,6 @@ If you want to manage click events only must to implement AwesomeTextHandler.Vie
 
 ```java
     public class MentionSpanRenderer implements AwesomeTextHandler.ViewSpanRenderer, AwesomeTextHandler.ViewSpanClickListener {
-
-        private final static int textSizeInDips = 18;
-        private final static int backgroundResource = R.drawable.common_mentions_background;
-        private final static int textColorResource = android.R.color.black;
 
         @Override
         public View getView(String text, Context context) {
