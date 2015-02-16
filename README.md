@@ -1,5 +1,7 @@
 # AwesomeText
-A tool that facilitates working with Spans on TextViews or any extension of them (EditTexts, Buttons...)
+A tool that facilitates working with Spans on TextViews or any extension of them (EditTexts, Buttons...).
+
+
 
 Screenshots
 -----------
@@ -9,6 +11,7 @@ Screenshots
 Usage
 -----
 
+```java
     public class HashtagsSpanRenderer implements AwesomeTextHandler.ViewSpanRenderer {
 
         private final static int textSizeInDips = 18;
@@ -26,8 +29,10 @@ Usage
             return view;
         }
     }
+```
 
 
+```java
     public class MentionSpanRenderer implements AwesomeTextHandler.ViewSpanRenderer, AwesomeTextHandler.ViewSpanClickListener {
 
         private final static int textSizeInDips = 18;
@@ -50,8 +55,10 @@ Usage
             Toast.makeText(context, "Hello " + text, Toast.LENGTH_SHORT).show();
         }
     }
+```
 
 
+```java
     public class MainActivity extends ActionBarActivity {
     
         private static final String hashtagPattern = "(#[\\p{L}0-9-_]+)";
@@ -78,6 +85,8 @@ Usage
                 .setView(editText);
         }
     }
+```
+
 
 Developed By
 ------------
