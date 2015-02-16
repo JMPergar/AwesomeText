@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'bintray-release'
 
 android {
     compileSdkVersion 21
@@ -8,7 +9,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 21
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
     }
     buildTypes {
         release {
@@ -18,6 +19,18 @@ android {
     }
 }
 
+repositories {
+    jcenter()
+}
+
 dependencies {
-    compile 'com.android.support:appcompat-v7:21.0.3'
+}
+
+publish {
+    userOrg = 'jmpergar'
+    groupId = 'com.jmpergar'
+    artifactId = 'AwesomeText'
+    version = '1.0.0'
+    description = 'AwesomeText'
+    website = 'https://github.com/JMPergar/AwesomeText'
 }
