@@ -12,6 +12,8 @@ Screenshots
 Usage
 -----
 
+On the same way that working with ListAdapter, you must implement an interface to delegate the creation of the view, in this case AwesomeTextHandler.ViewSpanRenderer interface. The method getView is the responsible of this.
+
 ```java
     public class HashtagsSpanRenderer implements AwesomeTextHandler.ViewSpanRenderer {
 
@@ -32,6 +34,7 @@ Usage
     }
 ```
 
+If you want to manage click events only must to implement AwesomeTextHandler.ViewSpanClickListener.
 
 ```java
     public class MentionSpanRenderer implements AwesomeTextHandler.ViewSpanRenderer, AwesomeTextHandler.ViewSpanClickListener {
@@ -58,6 +61,7 @@ Usage
     }
 ```
 
+And finally configure you AwesomeTextHandler view the changes. Now, when you call AwesomeTextHandler.setText the change will be rendered automatically.
 
 ```java
     public class MainActivity extends ActionBarActivity {
