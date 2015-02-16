@@ -12,7 +12,7 @@ Screenshots
 Usage
 -----
 
-On the same way that working with ListAdapter, you must implement an interface to delegate the creation of the view, in this case AwesomeTextHandler.ViewSpanRenderer interface. The method getView is the responsible of this.
+On the same way that you working with ListAdapter, you must implement an interface to delegate the creation of the view, in this case AwesomeTextHandler.ViewSpanRenderer interface. The method getView is the responsible of this.
 
 ```java
     public class HashtagsSpanRenderer implements AwesomeTextHandler.ViewSpanRenderer {
