@@ -23,13 +23,10 @@ On the same way that you working with ListAdapter, you must implement an interfa
 
         @Override
         public View getView(String text, Context context) {
-            TextView view = new TextView(context);
-            view.setText(text.substring(1));
-            view.setTextSize(ScreenUtils.dipsToPixels(context, textSizeInDips));
-            view.setBackgroundResource(backgroundResource);
-            int textColor = context.getResources().getColor(textColorResource);
-            view.setTextColor(textColor);
-            return view;
+            LayoutInflater inflater = LayoutInflater.from(context);
+            TextView hashtagView = inflater.inflate(R.layout.hashtag);
+            hashtagView.setText(text);
+            return hashtagView;
         }
     }
 ```
@@ -45,13 +42,10 @@ If you want to manage click events only must to implement AwesomeTextHandler.Vie
 
         @Override
         public View getView(String text, Context context) {
-            TextView view = new TextView(context);
-            view.setText(text.substring(1));
-            view.setTextSize(ScreenUtils.dipsToPixels(context, textSizeInDips));
-            view.setBackgroundResource(backgroundResource);
-            int textColor = context.getResources().getColor(textColorResource);
-            view.setTextColor(textColor);
-            return view;
+            LayoutInflater inflater = LayoutInflater.from(context);
+            TextView mentionView = inflater.inflate(R.layout.mention);
+            mentionView.setText(text);
+            return mentionView;
         }
 
         @Override
@@ -66,8 +60,8 @@ And finally configure you AwesomeTextHandler view the changes. Now, when you cal
 ```java
     public class MainActivity extends ActionBarActivity {
     
-        private static final String hashtagPattern = "(#[\\p{L}0-9-_]+)";
-        private static final String mentionPattern = "(@[\\p{L}0-9-_]+)";
+        private static final String HASHTAG_PATTERN = "(#[\\p{L}0-9-_]+)";
+        private static final String MENTION_PATTERN = "(@[\\p{L}0-9-_]+)";
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -79,14 +73,14 @@ And finally configure you AwesomeTextHandler view the changes. Now, when you cal
 
             AwesomeTextHandler awesomeTextViewHandler = new AwesomeTextHandler();
             awesomeTextViewHandler
-                .addViewSpanRenderer(hashtagPattern, new HashtagsSpanRenderer())
-                .addViewSpanRenderer(mentionPattern, new MentionSpanRenderer())
+                .addViewSpanRenderer(HASHTAG_PATTERN, new HashtagsSpanRenderer())
+                .addViewSpanRenderer(MENTION_PATTERN, new MentionSpanRenderer())
                 .setView(textView);
 
             AwesomeTextHandler awesomeEditTextHandler = new AwesomeTextHandler();
             awesomeEditTextHandler
-                .addViewSpanRenderer(hashtagPattern, new HashtagsSpanRenderer())
-                .addViewSpanRenderer(mentionPattern, new MentionSpanRenderer())
+                .addViewSpanRenderer(HASHTAG_PATTERN, new HashtagsSpanRenderer())
+                .addViewSpanRenderer(MENTION_PATTERN, new MentionSpanRenderer())
                 .setView(editText);
         }
     }
