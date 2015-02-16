@@ -59,7 +59,7 @@ If you want to manage click events only must to implement AwesomeTextHandler.Vie
     }
 ```
 
-And finally configure you AwesomeTextHandler view the changes. Now, when you call AwesomeTextHandler.setText the change will be rendered automatically.
+And finally you configure AwesomeTextHandler to view the changes. Now, when you call AwesomeTextHandler.setText the change will be rendered automatically.
 
 ```java
     public class MainActivity extends ActionBarActivity {
