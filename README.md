@@ -1,5 +1,5 @@
 # AwesomeText
-A tool that facilitates works with Spans on TextViews or any extension of thems (EditTexts, Buttons..)
+A tool that facilitates working with Spans on TextViews or any extension of them (EditTexts, Buttons...)
 
 
 
