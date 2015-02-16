@@ -6,6 +6,26 @@ Screenshots
 
 ![Demo Screenshot][1]
 
+Download
+--------
+
+Download via Maven:
+
+```xml
+    <dependency>
+        <groupId>com.jmpergar</groupId>
+        <artifactId>AwesomeText</artifactId>
+        <version>1.0.0</version>
+        <type>aar</type>
+    </dependency>
+```
+
+Or Gradle:
+
+```groovy
+    compile(group: 'com.jmpergar', name: 'AwesomeText', version: '1.0.0', ext: 'aar')
+```
+
 Usage
 -----
 
