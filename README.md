@@ -12,13 +12,20 @@ Download
 Download via Gradle:
 
 ```groovy
-    repositories {
-        maven { url "http://dl.bintray.com/jmpergar/maven" }
-    }
-    
     dependencies {
         compile 'com.jmpergar:AwesomeText:1.0.0'
     }
+```
+
+Or via Maven:
+
+```xml
+    <dependency>
+        <groupId>com.jmpergar</groupId>
+        <artifactId>AwesomeText</artifactId>
+        <version>1.0.0</version>
+        <type>aar</type>
+    </dependency>
 ```
 
 Usage
