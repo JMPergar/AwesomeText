@@ -1,4 +1,4 @@
-# AwesomeText
+# AwesomeText [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AwesomeText-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1554)](https://android-arsenal.com/details/1/1554)
 Working with Spans is ugly and difficult to manage, it's like working with a goblin of Moria. Don't understand the Spans? With AwesomeText you will only have to work with the classic Adapter Pattern. All the ease and potential of a pattern you already know how to use.
 
 Screenshots
