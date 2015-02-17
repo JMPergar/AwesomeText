@@ -1,6 +1,6 @@
 # AwesomeText
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AwesomeText-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1554)[ ![Download](https://api.bintray.com/packages/jmpergar/maven/AwesomeText/images/download.svg) ](https://bintray.com/jmpergar/maven/AwesomeText/_latestVersion) [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)] [![Platform](https://img.shields.io/badge/platform-android-green.svg)]
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AwesomeText-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1554)[ ![Download](https://api.bintray.com/packages/jmpergar/maven/AwesomeText/images/download.svg) ](https://bintray.com/jmpergar/maven/AwesomeText/_latestVersion) [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)](http://www.apache.org/licenses/LICENSE-2.0) [![Platform](https://img.shields.io/badge/platform-android-green.svg)](http://developer.android.com/index.html)
 
 Working with Spans is ugly and difficult to manage, it's like working with a goblin of Moria. Don't understand the Spans? With AwesomeText you will only have to work with the classic Adapter Pattern. All the ease and potential of a pattern you already know how to use.
 
