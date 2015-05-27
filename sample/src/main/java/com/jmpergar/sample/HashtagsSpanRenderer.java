@@ -17,6 +17,7 @@
 package com.jmpergar.sample;
 
 import android.content.Context;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 
@@ -32,7 +33,7 @@ public class HashtagsSpanRenderer implements AwesomeTextHandler.ViewSpanRenderer
     public View getView(String text, Context context) {
         TextView view = new TextView(context);
         view.setText(text.substring(1));
-        view.setTextSize(ScreenUtils.dipsToPixels(context, textSizeInDips));
+        view.setTextSize(TypedValue.COMPLEX_UNIT_PX, ScreenUtils.dipsToPixels(context, textSizeInDips));
         view.setBackgroundResource(backgroundResource);
         int textColor = context.getResources().getColor(textColorResource);
         view.setTextColor(textColor);

@@ -39,6 +39,6 @@ public class ViewUtils {
         Bitmap cacheBmp = view.getDrawingCache();
         Bitmap viewBmp = cacheBmp.copy(Bitmap.Config.ARGB_8888, true);
         view.destroyDrawingCache();
-        return new BitmapDrawable(viewBmp);
+        return new BitmapDrawable(view.getResources(), viewBmp);
     }
 }
