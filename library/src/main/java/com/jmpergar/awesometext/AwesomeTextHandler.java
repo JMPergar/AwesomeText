@@ -33,17 +33,16 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class AwesomeTextHandler {
-
     private final static int DEFAULT_RENDER_APPLY_MODE = Spannable.SPAN_EXCLUSIVE_EXCLUSIVE;
     private final static int UPPER_LEFT_X = 0;
     private final static int UPPER_LEFT_Y = 0;
 
     public interface ViewSpanRenderer {
-        public abstract View getView(final String text, final Context context);
+        View getView(final String text, final Context context);
     }
 
     public interface ViewSpanClickListener {
-        public void onClick(String text, Context context);
+        void onClick(String text, Context context);
     }
 
     private TextView view;
@@ -93,10 +92,15 @@ public class AwesomeTextHandler {
                     int start = matcher.start();
                     ViewSpanRenderer renderer = renderers.get(spanPattern);
                     String text = matcher.group(0);
-                    View view = renderer.getView(text, context);
-                    BitmapDrawable bitmpaDrawable = (BitmapDrawable) ViewUtils.convertViewToDrawable(view);
-                    bitmpaDrawable.setBounds(UPPER_LEFT_X, UPPER_LEFT_Y, bitmpaDrawable.getIntrinsicWidth(), bitmpaDrawable.getIntrinsicHeight());
-                    spannableString.setSpan(new ImageSpan(bitmpaDrawable), start, end, DEFAULT_RENDER_APPLY_MODE);
+                    ImageSpan imageSpan = AwesomeTextViewCache.getInstance().getCachedImageSpan(text);
+                    if (imageSpan == null) {
+                        View view = renderer.getView(text, context);
+                        BitmapDrawable bitmapDrawable = (BitmapDrawable) ViewUtils.convertViewToDrawable(view);
+                        bitmapDrawable.setBounds(UPPER_LEFT_X, UPPER_LEFT_Y, bitmapDrawable.getIntrinsicWidth(), bitmapDrawable.getIntrinsicHeight());
+                        imageSpan = new ImageSpan(bitmapDrawable);
+                        AwesomeTextViewCache.getInstance().cacheSpan(text, imageSpan);
+                    }
+                    spannableString.setSpan(imageSpan, start, end, DEFAULT_RENDER_APPLY_MODE);
                     if (renderer instanceof ViewSpanClickListener) {
                         enableClickEvents();
                         ClickableSpan clickableSpan = getClickableSpan(text, (ViewSpanClickListener) renderer);
